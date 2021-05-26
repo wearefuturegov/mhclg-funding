@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="confirmation" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Has your site been designated for development?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outline-planning" name="outline-planning" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="outline-planning">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outline-planning-2" name="outline-planning" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="outline-planning-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with designated site
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              A designated site is an area that has been recognised for it's quality and policies have been put in place to protect it.
+            </p>
+            <p>
+              Examples of designated areas include national parks and the Broads, Areas of Outstanding Natural Beauty, conservation areas and World Heritage sites.
+            </p>
+
+          </div>
+        </details>
+
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

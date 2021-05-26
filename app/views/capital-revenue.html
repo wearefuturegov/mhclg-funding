@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="outline-planning" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is the project focused on capital or revenue spend?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="capital-revenue" name="capital-revenue" type="radio" value="Capital">
+                <label class="govuk-label govuk-radios__label" for="capital-revenue">
+                  Capital
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="capital-revenue-2" name="capital-revenue" type="radio" value="Revenue">
+                <label class="govuk-label govuk-radios__label" for="capital-revenue-2">
+                  Revenue
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="capital-revenue-3" name="capital-revenue" type="radio" value="Both">
+                <label class="govuk-label govuk-radios__label" for="capital-revenue-3">
+                  Both
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with capital and revenue spend
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              Capital spend is money spent on fixed assets, such as land, buildings or equipment.
+            </p>
+            <p>
+              Revenue spend is costs incurred by the day-to-day activities of the project, such as buying stock or paying wages.
+            </p>
+
+          </div>
+        </details>
+
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

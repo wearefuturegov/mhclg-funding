@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="project-funding" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How much will your projects cost in total?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="project-total-cost" name="project-total-cost" type="radio" value="£0 to £249,999">
+                <label class="govuk-label govuk-radios__label" for="project-total-cost">
+                  £0 to £249,999
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="project-total-cost-2" name="project-total-cost" type="radio" value="£250,000 to £499,999">
+                <label class="govuk-label govuk-radios__label" for="project-total-cost-2">
+                  £250,000 to £499,999
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="project-total-cost-3" name="project-total-cost" type="radio" value="£500,000 to £749,999">
+                <label class="govuk-label govuk-radios__label" for="project-total-cost-3">
+                  £500,000 to £749,999
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="project-total-cost-4" name="project-total-cost" type="radio" value="£750,000 to £999,999">
+                <label class="govuk-label govuk-radios__label" for="project-total-cost-4">
+                  £750,000 to £999,999
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="project-total-cost-5" name="project-total-cost" type="radio" value="£1,000,000 to £3,000,000">
+                <label class="govuk-label govuk-radios__label" for="project-total-cost-5">
+                  £1,000,000 to £3,000,000
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with working out project costs
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            This is the total amount of money needed to complete your projects. Make sure every project is included in this total. You can update this amount later in the application.
+          </div>
+        </details>
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

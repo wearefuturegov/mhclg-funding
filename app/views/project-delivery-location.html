@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="project-delivery-date" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="project-delivery-location-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where is the project being delivered?
+              </h1>
+            </legend>
+            <div id="project-delivery-location-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="project-delivery-location" name="project-delivery-location" type="checkbox" value="England">
+                <label class="govuk-label govuk-checkboxes__label" for="project-delivery-location">
+                  England
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="project-delivery-location-2" name="project-delivery-location" type="checkbox" value="Wales">
+                <label class="govuk-label govuk-checkboxes__label" for="project-delivery-location-2">
+                  Wales
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="project-delivery-location-3" name="project-delivery-location" type="checkbox" value="Scotland">
+                <label class="govuk-label govuk-checkboxes__label" for="project-delivery-location-3">
+                  Scotland
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="project-delivery-location-3" name="project-delivery-location" type="checkbox" value="Northern Ireland">
+                <label class="govuk-label govuk-checkboxes__label" for="project-delivery-location-3">
+                  Northern Ireland
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with subsidy control
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              Subsidy control are rules in place to stop a company receiving government support to gain and advantage over it's competitors.
+            </p>
+            <a href="#">
+              Further guidance on subsidy control
+            </a>
+          </div>
+        </details>
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

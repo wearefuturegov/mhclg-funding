@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="designated-development" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you have outline planning consent?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outline-planning" name="outline-planning" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="outline-planning">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outline-planning-2" name="outline-planning" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="outline-planning-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with outline planning consent
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              Planning consent is a type of formal permission to develop or change land or buildings.
+            </p>
+            <p>
+              In most cases, it must be obtained from a local authority before any work begins.
+            </p>
+
+          </div>
+        </details>
+
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

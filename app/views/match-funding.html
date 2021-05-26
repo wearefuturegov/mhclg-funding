@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="project-cost" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Will the project receive match funding?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--radios__conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="receive-match-funding" name="receive-match-funding" type="radio" value="Yes" data-aria-controls="match-funding-percentage">
+                <label class="govuk-label govuk-radios__label" for="receive-match-funding">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="match-funding-percentage">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="match-funding-percentage">
+                    What is the percentage?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="match-funding-percentage" name="match-funding-percentage" type="text" spellcheck="false"></div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="receive-match-funding-2" name="receive-match-funding" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="receive-match-funding-2">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with match funding
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Match funding means a percentage of the funds will be raised by the fund recipient. This can be from private enterprises, local bodies or other sources.
+          </div>
+        </details>
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

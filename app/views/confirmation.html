@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__body"><strong>The project is suitable to apply for the Local Growth Fund</strong></h1>
+
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>You can now continue with your application for the Local Growth Fund.</p>
+
+      <p>You will have the ability to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>save and return to your application</li>
+        <li>make changes and review your answers.</li>
+      </ul>
+
+      <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        Continue application
+      </a>
+      <p><a href="#">Search for other funds</a></p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

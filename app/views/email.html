@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="match-funding" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="email-address">
+              What is your email address?
+            </label>
+          </h1>
+          <div id="email-address-hint" class="govuk-hint">
+            You will need this to access your saved application
+          </div>
+          <input class="govuk-input govuk-input--width-20" id="email-address" name="email-address" type="email" spellcheck="false" aria-describedby="email-address-hint">
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
