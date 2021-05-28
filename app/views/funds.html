@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View all funds
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Fund search results '{{ name }}'
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        x results found
+      </h2>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      filters
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div id="funds-list"></div>
+
+      <div id="pagination">
+        <p>
+          <strong>1</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">4</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var funds = [
+      {
+          "title": "Towns fund",
+          "link": "#",
+          "status": "Open",
+          "type": "Deal",
+          "total_fund": "3.6bn",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2026",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>The Getting Building Fund targets areas cafing the biggest economic challenges as a result of the pandemic. It supports the delivery of shovel-ready infrastructure projects, agreed with mayors and Local Enterprise Partnerships to boost economic growth, and fuel recovery and jobs.</p>'
+      },
+      {
+          "title": "Getting building fund",
+          "link": "#",
+          "status": "Closed",
+          "type": "Deal",
+          "total_fund": "900m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      } 
+  ]
+    var mainContainer = document.getElementById("funds-list");
+    for (var i = 0; i < funds.length; i++) {
+        var div = document.createElement("div");
+        div.classList.add("govuk-grid-column-full")
+        div.innerHTML = '<br/><h2 class="govuk-heading-m"><a href="' + funds[i].link + '">' + funds[i].title + '</a></h2>';
+        div.innerHTML += '<p><strong>Fund status</strong> ' + funds[i].status + '</p>';
+        div.innerHTML += '<p><strong>Fund type</strong> ' + funds[i].type + '</p>';
+        div.innerHTML += '<p><strong>Total fund</strong> ' + funds[i].total_fund + '</p>';
+        div.innerHTML += '<p><strong>Opening date</strong> ' + funds[i].opening_date + '</p>';
+        div.innerHTML += '<p><strong>Closing date</strong> ' + funds[i].closing_date + '</p>';
+        div.innerHTML += funds[i].body;
+        mainContainer.appendChild(div);
+        if((i+1) !== funds.length) {
+          mainContainer.appendChild(document.createElement("hr"));
+        }
+    }
+  </script>
+{% endblock %}
+
+
