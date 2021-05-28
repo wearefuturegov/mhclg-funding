@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">The project is not suitable to apply for the {{ fund }} fund</h1>
+
+      <p>
+        We don't accept applications from organisations not looking to secure local match funding.
+      </p>
+
+      <p>You may want to review your answers and try again. Or, if you are a smaller organisation take a look at <a href="#">other sources of funding help</a>.</p>
+
+      <div class="govuk-button-group">
+        <a href="match-funding" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Try again
+        </a>
+        <p><a href="search-funds">Search for other funds</a></p>
+      </div>
+
+      <p><a href="#">Contact help and support</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

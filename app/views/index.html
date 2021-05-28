@@ -16,7 +16,7 @@
         <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Local Growth Fund</a>
+        <a class="govuk-breadcrumbs__link" href="#">{{ fundName }}</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link">Application</a>
@@ -30,7 +30,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        {% if serviceName %} {{ serviceName }} {% endif %} application
+        {{ fundName }} application
       </h1>
 
       <p>Answer the questions on the following page to check your project is suitable for this fund.</p>
@@ -59,7 +59,7 @@
       </ul>
 
       <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.
-.</p>
+      </p>
 
       <a href="email" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
@@ -80,12 +80,12 @@
           <ul class="govuk-list govuk-!-font-size-16">
             <li>
               <a href="#">
-                Local Growth Fund prospectus
+                {{ fundName }} prospectus
               </a>
             </li>
             <li>
               <a href="#">
-                Local Growth Fund guidance
+                {{ fundName }} guidance
               </a>
             </li>
             <li>

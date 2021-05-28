@@ -10,7 +10,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__body"><strong>The project is suitable to apply for the Local Growth Fund</strong></h1>
+        <h1 class="govuk-panel__body"><strong>The project is suitable to apply for the {{ fundName }}</strong></h1>
 
       </div>
 
@@ -19,7 +19,7 @@
       </p>
 
       <h2 class="govuk-heading-m">What happens next</h2>
-      <p>You can now continue with your application for the Local Growth Fund.</p>
+      <p>You can now continue with your application for the {{ fundName }}.</p>
 
       <p>You will have the ability to:</p>
 
@@ -28,11 +28,12 @@
         <li>make changes and review your answers.</li>
       </ul>
 
-      <a href="#" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-        Continue application
-      </a>
-      <p><a href="#">Search for other funds</a></p>
-
+      <div class="govuk-button-group">
+        <a href="task-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Continue aplication
+        </a>
+        <p><a href="search-funds">Search for other funds</a></p>
+      </div>
 
     </div>
   </div>
