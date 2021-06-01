@@ -1,0 +1,434 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View all funds
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="index" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Fund search results
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        <span id="funds-count">0</span> results found
+      </h2>
+    </div>
+    <div class="govuk-grid-column-one-third">  
+      
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <h2 class="govuk-details__summary-text govuk-fieldset__heading">
+            Help with nationality
+          </h2>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Access to employment
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Business support
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                    Climate change
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Environment
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    IT and broadband
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Learning and skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Low carbon
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Renewable energy
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Research and innovation
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Social inclusion
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Transport
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Technical assistance
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                    Tourism
+                  </label>
+                </div>
+              </div>
+          </div>
+        </div>
+      </details>
+    
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <h2 class="govuk-details__summary-text govuk-fieldset__heading">
+            Fund location
+          </h2>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  North East
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  North West
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  Yorkshire and Humber
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  East Midlands
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  East of England
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  South East
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  South West
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  London
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <h2 class="govuk-details__summary-text govuk-fieldset__heading">
+            Fund type
+          </h2>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Competition
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  Deal
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  Other
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <h2 class="govuk-details__summary-text govuk-fieldset__heading">
+            Fund status
+          </h2>
+        </summary>
+        <div class="govuk-details__text">
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Open
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  Closed
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  Upcoming
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" onclick="location.href='funds-filtered.html'">
+          Apply filters
+        </button>
+        <a class="govuk-link" href="#">Clear filters</a>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <p class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="event-name">
+            Search by fund name or reference
+          </label>
+        </p>
+        <input style="max-width: calc(100% - 86px)" class="govuk-input" id="event-name" name="event-name" type="text">
+        <button class="govuk-button" data-module="govuk-button">
+          Search
+        </button>
+      </div>
+      <hr />
+      <div id="funds-list"></div>
+
+      <div id="pagination">
+        <p>
+          <strong>1</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#">4</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var funds = [
+      
+      {
+          "title": "Getting building fund",
+          "link": "#",
+          "status": "Closed",
+          "type": "Deal",
+          "total_fund": "900m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "Towns fund",
+          "link": "#",
+          "status": "Open",
+          "type": "Deal",
+          "total_fund": "3.6bn",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2026",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>The Getting Building Fund targets areas cafing the biggest economic challenges as a result of the pandemic. It supports the delivery of shovel-ready infrastructure projects, agreed with mayors and Local Enterprise Partnerships to boost economic growth, and fuel recovery and jobs.</p>'
+      },
+      {
+          "title": "Future High Streets fund",
+          "link": "#",
+          "status": "Closed",
+          "type": "Competition",
+          "total_fund": "900m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "Local Growth Funds",
+          "link": "#",
+          "status": "Closed",
+          "type": "Competition",
+          "total_fund": "12bn",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "UK Community Renewal Fund",
+          "link": "#",
+          "status": "Open",
+          "type": "Competition",
+          "total_fund": "220m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "European Regional Development Fund",
+          "link": "#",
+          "status": "Closed",
+          "type": "Competition",
+          "total_fund": "3.4bn",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "Coastal Communities Fund",
+          "link": "#",
+          "status": "Open",
+          "type": "Competition",
+          "total_fund": "15m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      },
+      {
+          "title": "Levelling Up Fund",
+          "link": "#",
+          "status": "Open",
+          "type": "Competition",
+          "total_fund": "15m",
+          "opening_date": "27 May 2020",
+          "closing_date": "7 May 2025",
+          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
+                  <p>To apply you must be able to demonstrate:</p>\
+                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li>\
+                    <li>Lorem ipsum doler set decorum ist</li></ul>\
+                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
+      }
+  ]
+    var mainContainer = document.getElementById("funds-list");
+    document.getElementById("funds-count").innerHTML = funds.length;
+    for (var i = 0; i < funds.length; i++) {
+        var div = document.createElement("div");
+        div.classList.add("govuk-grid-column-full")
+        div.innerHTML = '<br/><h2 class="govuk-heading-m"><a href="' + funds[i].link + '">' + funds[i].title + '</a></h2>';
+        div.innerHTML += '<p><strong>Fund status</strong> ' + funds[i].status + '</p>';
+        div.innerHTML += '<p><strong>Fund type</strong> ' + funds[i].type + '</p>';
+        div.innerHTML += '<p><strong>Total fund</strong> £' + funds[i].total_fund + '</p>';
+        div.innerHTML += '<p><strong>Opening date</strong> ' + funds[i].opening_date + '</p>';
+        div.innerHTML += '<p><strong>Closing date</strong> ' + funds[i].closing_date + '</p>';
+        div.innerHTML += funds[i].body;
+        mainContainer.appendChild(div);
+        if((i+1) !== funds.length) {
+          mainContainer.appendChild(document.createElement("hr"));
+        }
+    }
+  </script>
+{% endblock %}
+
+

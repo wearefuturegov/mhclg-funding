@@ -13,4 +13,10 @@ router.post('/match-funding-results', function (req, res) {
   }
 })
 
+
+router.get('funds', function (req, res) {
+    res.render('funds', { name: 'Foo' })
+})
+
+
 module.exports = router
