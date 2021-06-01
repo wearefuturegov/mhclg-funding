@@ -22,7 +22,7 @@
       </h1>
 
       <h2 class="govuk-heading-m">
-        <span id="funds-count">0</span> results found
+        <span id="funds-count">0</span> filtered results found
       </h2>
     </div>
     <div class="govuk-grid-column-one-third">  
@@ -213,7 +213,7 @@
         </div>
       </details>
 
-      <details class="govuk-details" data-module="govuk-details">
+      <details class="govuk-details" data-module="govuk-details" open>
         <summary class="govuk-details__summary">
           <h2 class="govuk-details__summary-text govuk-fieldset__heading">
             Fund status
@@ -223,7 +223,7 @@
           <div class="govuk-form-group">
             <div class="govuk-checkboxes govuk-checkboxes--small">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked>
                 <label class="govuk-label govuk-checkboxes__label" for="organisation">
                   Open
                 </label>
@@ -247,10 +247,10 @@
 
 
       <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button" onclick="location.href='funds-filtered.html'">
+        <button class="govuk-button" data-module="govuk-button">
           Apply filters
         </button>
-        <a class="govuk-link" href="#">Clear filters</a>
+        <a class="govuk-link" href="funds">Clear filters</a>
       </div>
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -281,23 +281,6 @@
 
   <script>
     var funds = [
-      
-      {
-          "title": "Getting building fund",
-          "link": "#",
-          "status": "Closed",
-          "type": "Deal",
-          "total_fund": "900m",
-          "opening_date": "27 May 2020",
-          "closing_date": "7 May 2025",
-          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
-                  <p>To apply you must be able to demonstrate:</p>\
-                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li></ul>\
-                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
-      },
       {
           "title": "Towns fund",
           "link": "#",
@@ -315,59 +298,11 @@
                   <p>The Getting Building Fund targets areas cafing the biggest economic challenges as a result of the pandemic. It supports the delivery of shovel-ready infrastructure projects, agreed with mayors and Local Enterprise Partnerships to boost economic growth, and fuel recovery and jobs.</p>'
       },
       {
-          "title": "Future High Streets fund",
-          "link": "#",
-          "status": "Closed",
-          "type": "Competition",
-          "total_fund": "900m",
-          "opening_date": "27 May 2020",
-          "closing_date": "7 May 2025",
-          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
-                  <p>To apply you must be able to demonstrate:</p>\
-                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li></ul>\
-                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
-      },
-      {
-          "title": "Local Growth Funds",
-          "link": "#",
-          "status": "Closed",
-          "type": "Competition",
-          "total_fund": "12bn",
-          "opening_date": "27 May 2020",
-          "closing_date": "7 May 2025",
-          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
-                  <p>To apply you must be able to demonstrate:</p>\
-                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li></ul>\
-                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
-      },
-      {
           "title": "UK Community Renewal Fund",
           "link": "#",
           "status": "Open",
           "type": "Competition",
           "total_fund": "220m",
-          "opening_date": "27 May 2020",
-          "closing_date": "7 May 2025",
-          "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
-                  <p>To apply you must be able to demonstrate:</p>\
-                  <ul class="govuk-list govuk-list--bullet"><li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li>\
-                    <li>Lorem ipsum doler set decorum ist</li></ul>\
-                  <p>Towns Fund is part of the government\'s plan to level up the UK economy. The towns invited to develop proposals will work with the Government to address growth constraints and to ensure there is a course of recovery from the impact of COVID-19.</p><br/>'
-      },
-      {
-          "title": "European Regional Development Fund",
-          "link": "#",
-          "status": "Closed",
-          "type": "Competition",
-          "total_fund": "3.4bn",
           "opening_date": "27 May 2020",
           "closing_date": "7 May 2025",
           "body": '<h3 class="govuk-heading-s">Eligibility</h3>\
