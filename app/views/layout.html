@@ -47,9 +47,14 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+  {{ data | dump }}
+
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+<!-- Fund name. Change the name of the fund used throughout the prototype. Create multiple variables, eg fundName2 -->
+{% set fundName = "Costal Communities Fund" %}
+
 
 {% if useAutoStoreData %}
   {% block footer %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="task-list" method="post">
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Organisation information
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-name-1">
+              Organisation name
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="organisation-name" name="organisation-name" type="text" {% if data['organisation-name'] %}value="{{ data['organisation-name'] }}"{% endif %}></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-type">
+              Organisation type
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="organisation-type" name="organisation-type" type="text" {% if data['organisation-type'] %}value="{{ data['organisation-type'] }}"{% endif %}></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-registration">
+              Organisation registration number
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="organisation-registration" name="organisation-registration" type="text" {% if data['organisation-registration'] %}value="{{ data['organisation-registration'] }}"{% endif %}></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-vat">
+              Organisation VAT number
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="organisation-vat" name="organisation-vat" type="text" {% if data['organisation-vat'] %}value="{{ data['organisation-vat'] }}"{% endif %}></div>
+
+        </fieldset>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
