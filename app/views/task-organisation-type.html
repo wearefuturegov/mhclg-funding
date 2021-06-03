@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="window.history.back()" href="#">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="task-list" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            idPrefix: "organisation-type",
+            name: "organisation-type",
+            fieldset: {
+              legend: {
+                text: "Organisation type",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Ltd Company",
+                text: "Ltd Company",
+                checked: checked("organisation-type", "Ltd Company")
+              },
+              {
+                value: "Limited Liability Partnership",
+                text: "Limited Liability Partnership",
+                checked: checked("organisation-type", "Limited Liability Partnership")
+              },
+              {
+                value: "Local Enterprise Partnership",
+                text: "Local Enterprise Partnership",
+                checked: checked("organisation-type", "Local Enterprise Partnership")
+              },
+              {
+                value: "Local authority",
+                text: "Local authority",
+                checked: checked("organisation-type", "Local authority")
+              },
+              {
+                value: "University",
+                text: "University",
+                checked: checked("organisation-type", "University")
+              },
+              {
+                value: "Charity",
+                text: "Charity",
+                checked: checked("organisation-type", "Charity")
+              },
+              {
+                value: "Other",
+                text: "Other",
+                checked: checked("organisation-type", "Other")
+              }
+            ]
+          }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}
